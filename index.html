@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-inPBUaRJIXsD0vvn2LgklfZLAvrFNbIGHxnBD2z5FU0='; style-src 'sha256-eNfNoLNkRzSXf0EBlnBp+ugHrOS2C3w/XBwuwCYUSoA=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data: https://images.unsplash.com; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; manifest-src 'none'; upgrade-insecure-requests; require-trusted-types-for 'script'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-XNeByT0/007rLt5c9oKd7AUHs+WqFe/q2WIBBpx0Ads='; style-src 'sha256-eNfNoLNkRzSXf0EBlnBp+ugHrOS2C3w/XBwuwCYUSoA=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data: https://images.unsplash.com; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; manifest-src 'none'; upgrade-insecure-requests; require-trusted-types-for 'script'">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#F5EEDF" media="(prefers-color-scheme: light)">
@@ -208,7 +208,7 @@ legend{margin-bottom:6px;font-weight:700}
   <div class="dh"><h2 id="cartT">سلة الطلب</h2><button type="button" class="x" data-close aria-label="إغلاق"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button></div>
   <ul id="cartList" class="clist"></ul>
   <p id="cartEmpty" class="empty">السلة فاضية. ضيف أصناف من المنيو.</p>
-  <div id="sum" class="sum" hidden><b id="sumTxt"></b><small id="sumNote"></small></div>
+  <div id="sum" class="sum" hidden><b id="sumTxt"></b><small id="sumNote"></small><small id="cartWaOff" hidden>إرسال الطلب عبر واتساب غير مفعّل حاليًا: رقم واتساب المطعم لم يُضبط بعد.</small></div>
   <div class="df"><button id="clearBtn" class="btn ghost" type="button">إفراغ السلة</button><button id="goCo" class="btn" type="button">إتمام الطلب</button></div>
 </dialog>
 
@@ -424,7 +424,8 @@ function renderCart() {
   $('#cartCount').textContent = n; $('#cartCount').hidden = !n;
   $('#qc').hidden = !n; $('#qcTxt').textContent = n + (n === 1 ? ' صنف' : ' أصناف');
   $('#cartEmpty').hidden = n > 0; $('#cartList').hidden = !n; $('#sum').hidden = !n;
-  $('#goCo').disabled = !n; $('#clearBtn').disabled = !n;
+  $('#goCo').disabled = !n || !waOK; $('#clearBtn').disabled = !n;
+  $('#cartWaOff').hidden = waOK;
   $('#sumTxt').textContent = 'المجموع: ' + sumText(subtotal());
   $('#sumNote').textContent = CONFIG.minOrder ? 'الحد الأدنى للتوصيل ' + money(CONFIG.minOrder) : '';
   const frag = document.createDocumentFragment();
