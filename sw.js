@@ -1,5 +1,5 @@
 const PREFIX = 'pyramids-site-';
-const CACHE = PREFIX + 'v1';
+const CACHE = PREFIX + 'v2';
 const SCOPE = new URL(self.registration.scope);
 const ICONS = ['1-icon-192.png', '2-icon-512.png'].map(path => new URL(path, SCOPE).href);
 const OFFLINE = '<!doctype html><html lang="ar-EG" dir="rtl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>بيراميدز | غير متصل</title><body style="font:18px/1.7 system-ui;margin:10vw;color:#12292c;background:#f5eedf"><h1>بيراميدز</h1><p>الإنترنت مش متاح دلوقتي. عشان نعرض أحدث منيو وبيانات الطلب، اتصل بالإنترنت وافتح الصفحة تاني.</p><a href="./">حاول تاني</a></body></html>';
