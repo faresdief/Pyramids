@@ -13,7 +13,7 @@
     <meta name="twitter:title" content="بيراميدز | مشويات مصرية في قصر العيني">
     <meta name="twitter:description" content="اختار من المنيو وراجع طلبك قبل الإرسال.">
     <meta name="twitter:image" content="https://faresdief.github.io/Pyramids/og-image.jpg">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-0mTxbCyrbs3o5AD692QdxkwmE15R1uTbml01wIse1Nw='; style-src 'sha256-CS7r2S+XMkjihOTV/RlisE2ZTwQUCBjzLvxTctgNaS8=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; require-trusted-types-for 'script'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-jwoVwwm4G5rjLj9FECUPJUnYIDKCj5//Rz49wZtXz9I='; style-src 'sha256-CS7r2S+XMkjihOTV/RlisE2ZTwQUCBjzLvxTctgNaS8=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; trusted-types pyramids-pwa; require-trusted-types-for 'script'">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#F5EEDF" media="(prefers-color-scheme: light)">
@@ -681,7 +681,12 @@ installBtn.addEventListener('click', async () => {
   try { await prompt.prompt(); } catch { /* installation remains available from the browser menu */ }
 });
 if ('serviceWorker' in navigator && window.isSecureContext) {
-  navigator.serviceWorker.register(new URL('./sw.js', location.href), {updateViaCache:'none'}).catch(() => {});
+  const swURL = new URL('./sw.js', location.href).href;
+  const policy = window.trustedTypes?.createPolicy('pyramids-pwa', {createScriptURL: url => {
+    if (url !== swURL) throw new TypeError('Unexpected worker URL');
+    return swURL;
+  }});
+  navigator.serviceWorker.register(policy ? policy.createScriptURL(swURL) : swURL, {updateViaCache:'none'}).catch(() => {});
 }
 </script>
 </body>
