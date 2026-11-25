@@ -11,19 +11,19 @@
     <meta property="og:image:alt" content="بيراميدز | مشويات مصرية في قصر العيني">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="بيراميدز | مشويات مصرية في قصر العيني">
-    <meta name="twitter:description" content="اختار من المنيو وابعت طلبك للمطعم على واتساب.">
+    <meta name="twitter:description" content="اختار من المنيو وراجع طلبك قبل الإرسال.">
     <meta name="twitter:image" content="https://faresdief.github.io/Pyramids/og-image.jpg">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-XNeByT0/007rLt5c9oKd7AUHs+WqFe/q2WIBBpx0Ads='; style-src 'sha256-eNfNoLNkRzSXf0EBlnBp+ugHrOS2C3w/XBwuwCYUSoA=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data: https://images.unsplash.com; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; manifest-src 'none'; upgrade-insecure-requests; require-trusted-types-for 'script'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-yB+y4m625+AKCTzTLFohLkcyfF3KRMEAMrnAC1S75h4='; style-src 'sha256-70AOLtkO3NpM36pGocKmdqetostVidvpCb/MfOxEJ08=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data: https://images.unsplash.com; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; manifest-src 'none'; upgrade-insecure-requests; require-trusted-types-for 'script'">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#F5EEDF" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0A1C1F" media="(prefers-color-scheme: dark)">
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="مطعم بيراميدز في قصر العيني: مشويات وسندوتشات ووجبات وطواجن مصرية. اختار من المنيو وابعت طلبك على واتساب.">
+<meta name="description" content="منيو بيراميدز في قصر العيني: مشويات وسندوتشات ووجبات وطواجن مصرية. اختار أكلك وراجع طلبك.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ar_EG">
 <meta property="og:title" content="بيراميدز | مشويات مصرية في قصر العيني">
-<meta property="og:description" content="اختار من المنيو وابعت طلبك للمطعم على واتساب.">
+<meta property="og:description" content="اختار من المنيو وراجع طلبك قبل الإرسال.">
 <title>بيراميدز | مشويات مصرية في قصر العيني</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B4F55'/%3E%3Cpath d='M16 6 27 25H5z' fill='%23D3A347'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -150,7 +150,20 @@ legend{margin-bottom:6px;font-weight:700}
 .grp{display:grid;gap:4px}
 @keyframes pop{from{opacity:0;transform:translateY(10px)}}
 @keyframes slide{from{transform:translateX(-100%)}}
-@media(max-width:760px){.hero-in{grid-template-columns:1fr}.arch{max-width:200px}.bar nav{display:none}}
+.menu-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:2px 16px;margin-block:8px}
+.menu-head h2{font:700 30px var(--fd);color:var(--ac)}
+.menu-head p,.menu-count{color:var(--mut);font-size:14px}
+.menu-count{margin:6px 0 12px}
+.empty .btn{margin-top:12px}
+.pr{color:var(--ac)}
+.item{flex-wrap:wrap}
+.step button{width:44px;height:44px}
+#coForm .dh{position:sticky;top:0;z-index:2;background:var(--sf)}
+.draft{display:grid;gap:10px;margin-top:10px;padding:14px;border:1px solid var(--line);border-radius:14px;background:var(--bg)}
+.draft pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;color:var(--ink)}
+.draft p{font-size:14px;color:var(--mut)}
+@media(max-width:760px){.hero-in{grid-template-columns:1fr;padding:20px}.hero-tx p{margin:8px 0 16px}.arch{display:none}.bar nav{display:none}.steps{display:grid;grid-template-columns:1fr;gap:6px;margin-block:12px}.steps li{padding:7px 10px;font-size:14px}.steps li::before{width:24px;height:24px}.qc button{width:min(100%,440px);justify-content:space-between}.tools{gap:6px}}
+@media(max-width:540px){.grid{grid-template-columns:1fr;gap:10px}.card{flex-direction:row;min-height:125px}.ph{flex:0 0 clamp(84px,26vw,136px);aspect-ratio:auto;align-self:stretch}.bd{min-width:0;padding:10px 12px}.bd h3{font-size:16px}.bd p{min-height:0;font-size:13px}.ft{padding-top:4px}.item .inf{flex-basis:100%}.drawer{border-radius:0}.modal{max-height:calc(100dvh - 12px)}}
 @media(prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -181,33 +194,34 @@ legend{margin-bottom:6px;font-weight:700}
   <div class="hero-tx">
     <p id="status" class="status" hidden></p>
     <h1>طعم مصري أصيل من قلب قصر العيني</h1>
-    <p>مشويات وسندوتشات ووجبات وطواجن. اختار من المنيو وابعت طلبك للمطعم على واتساب.</p>
+    <p>مشويات وسندوتشات ووجبات وطواجن. اختار من المنيو وراجع طلبك قبل الإرسال.</p>
     <a class="btn gold" href="#menu">شوف المنيو</a>
   </div>
   <div class="arch"><svg class="ic" aria-hidden="true"><use href="#i-pyr"/></svg><img src="https://images.unsplash.com/photo-1763647818263-62a9256f097c?auto=format&fit=crop&w=800&q=78" alt="" width="800" height="1000" fetchpriority="high" decoding="async" referrerpolicy="no-referrer"></div>
 </div></section>
 
-<div class="wrap"><ol class="steps"><li>اختار أكلك من المنيو</li><li>راجع السلة وعدّل الكميات</li><li>ابعت الطلب على واتساب</li></ol></div>
+<div class="wrap"><ol class="steps"><li>اختار أكلك من المنيو</li><li>راجع السلة وعدّل الكميات</li><li id="stepOrder">راجع طريقة الطلب</li></ol></div>
 
-<section id="menu" class="wrap" aria-label="المنيو">
+<section id="menu" class="wrap" aria-labelledby="menuT">
+  <div class="menu-head"><h2 id="menuT">المنيو</h2><p>الأسعار بتتأكد قبل قبول الطلب.</p></div>
   <div class="tools">
     <div class="srch"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><input id="q" type="search" placeholder="بتدور على إيه؟" autocomplete="off" maxlength="40" aria-label="ابحث في المنيو"></div>
     <div id="chips" class="chips" role="group" aria-label="أقسام المنيو"></div>
   </div>
-  <p id="count" class="sr" role="status"></p>
+  <p id="count" class="menu-count" role="status"></p>
   <div id="grid" class="grid"></div>
-  <p id="empty" class="empty" hidden>مفيش صنف بالاسم ده. جرّب كلمة تانية أو قسم تاني.</p>
+  <div id="empty" class="empty" hidden><p>مفيش صنف مطابق للبحث.</p><button id="resetFilter" class="btn ghost" type="button">اعرض المنيو كله</button></div>
 </section>
 
 <section id="contact" class="wrap info">
   <h2>تواصل معنا</h2>
   <ul>
     <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span id="addr"></span></li>
-    <li id="hoursRow" hidden><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span id="hoursTxt"></span></li>
+    <li id="hoursRow"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg><span id="hoursTxt"></span></li>
     <li id="phoneRow" hidden><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><a id="phoneA"></a></li>
     <li id="waRow" hidden><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg><a id="waA" target="_blank" rel="noopener noreferrer"></a></li>
   </ul>
-  <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Qasr+Al+Ainy+Cairo+Egypt" target="_blank" rel="noopener noreferrer">افتح الموقع على الخريطة</a>
+  <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Qasr+Al+Ainy+Cairo+Egypt" target="_blank" rel="noopener noreferrer">افتح منطقة قصر العيني على الخريطة</a>
 </section>
 </main>
 
@@ -220,12 +234,12 @@ legend{margin-bottom:6px;font-weight:700}
   <ul id="cartList" class="clist"></ul>
   <p id="cartEmpty" class="empty">السلة فاضية. ضيف أصناف من المنيو.</p>
   <div id="sum" class="sum" hidden><b id="sumTxt"></b><small id="sumNote"></small><small id="cartWaOff" hidden>إرسال الطلب عبر واتساب غير مفعّل حاليًا: رقم واتساب المطعم لم يُضبط بعد.</small></div>
-  <div class="df"><button id="clearBtn" class="btn ghost" type="button">إفراغ السلة</button><button id="goCo" class="btn" type="button">إتمام الطلب</button></div>
+  <div class="df"><button id="clearBtn" class="btn ghost" type="button">إفراغ السلة</button><button id="goCo" class="btn" type="button" aria-describedby="cartWaOff">راجع الطلب</button></div>
 </dialog>
 
 <dialog id="coDlg" class="modal" aria-labelledby="coT">
   <form id="coForm" novalidate>
-    <div class="dh"><h2 id="coT">بيانات التوصيل</h2><button type="button" class="x" data-close aria-label="إغلاق"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+    <div class="dh"><h2 id="coT">بيانات الطلب</h2><button type="button" class="x" data-close aria-label="إغلاق"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button></div>
     <label>الاسم<input id="fName" autocomplete="name" maxlength="50" required aria-describedby="eName"></label>
     <small id="eName" class="err"></small>
     <label>رقم الموبايل<input id="fPhone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="16" dir="ltr" placeholder="01XXXXXXXXX" required aria-describedby="ePhone"></label>
@@ -240,12 +254,18 @@ legend{margin-bottom:6px;font-weight:700}
     <small id="eAddr" class="err"></small>
     </div>
     <label>ملاحظات على الطلب (اختياري)<textarea id="fNote" rows="2" maxlength="250" placeholder="مثلاً: من غير بصل"></textarea></label>
-    <p id="closedNote" class="note" hidden>المطعم مغلق حاليًا، وهيتم تأكيد طلبك عند الفتح.</p>
+    <p id="closedNote" class="note" hidden>المطعم مغلق حاليًا. وقت الرد وتأكيد الطلب بيحددهم المطعم.</p>
     <p id="coSum" class="note"></p>
     <small id="eOrd" class="err" role="alert"></small>
     <p id="waOff" class="note" hidden>إرسال الطلب غير مفعّل حاليًا لأن رقم واتساب المطعم لم يُضبط بعد.</p>
-    <button id="send" class="btn wa" type="submit"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>إرسال الطلب عبر واتساب</button>
-    <a id="waLink" class="btn ghost" target="_blank" rel="noopener noreferrer" hidden>لو واتساب ما اتفتحش، اضغط هنا</a>
+    <button id="send" class="btn" type="submit">جهّز رسالة الطلب</button>
+    <section id="draft" class="draft" aria-labelledby="draftT" hidden>
+      <h3 id="draftT" tabindex="-1">راجع رسالة الطلب</h3>
+      <pre id="draftTxt"></pre>
+      <p>الرسالة مش هتتبعت إلا لما تضغط إرسال داخل واتساب. السعر والقبول بيتأكدوا في الرد.</p>
+      <a id="waLink" class="btn wa" target="_blank" rel="noopener noreferrer"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>افتح المسودة على واتساب</a>
+    </section>
+    <button id="backCart" class="btn ghost" type="button">رجوع للسلة</button>
   </form>
 </dialog>
 
@@ -262,7 +282,7 @@ legend{margin-bottom:6px;font-weight:700}
 <script type="module">
 /* ===== إعدادات المطعم: عدّلها قبل النشر ===== */
 const CONFIG = Object.freeze({
-  whatsapp: '',                       // بالصيغة الدولية بدون + (مثال: 201012345678)
+  whatsapp: '201282083162',           // رقم استقبال الطلبات، بالصيغة الدولية بدون +
   phone: '',                          // مثال: 01012345678
   address: 'قصر العيني، القاهرة، مصر',
   currency: 'ج.م',
@@ -306,7 +326,7 @@ const MAP = new Map(MENU.map(m => [m.id, m]));
 const $ = s => document.querySelector(s);
 const NS = 'http://www.w3.org/2000/svg';
 const AR_DIGITS = '٠١٢٣٤٥٦٧٨٩';
-const toLatin = s => String(s).replace(/[٠-٩]/g, d => AR_DIGITS.indexOf(d));
+const toLatin = s => String(s).replace(/[٠-٩۰-۹]/gu, d => AR_DIGITS.includes(d) ? AR_DIGITS.indexOf(d) : d.charCodeAt(0) - 0x6f0);
 const norm = s => toLatin(String(s).toLowerCase()).replace(/[\u064B-\u065F\u0670\u0640]/g, '').replace(/[أإآ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه').trim();
 const clean = (s, max) => String(s).normalize('NFKC').replace(/[\u0000-\u001F\u007F\u200B-\u200F\u202A-\u202E\u2066-\u2069]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
 const debounce = (fn, ms) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; };
@@ -424,6 +444,7 @@ function applyFilter() {
   }
   $('#empty').hidden = n > 0;
   $('#count').textContent = n + ' صنف';
+  for (const b of $('#chips').children) b.setAttribute('aria-pressed', String(b.dataset.cat === cat));
 }
 
 function stepBtn(act, ic, label, id) {
@@ -433,10 +454,12 @@ function renderCart() {
   const n = qty(), by = new Map();
   for (const l of cart) by.set(l.id, (by.get(l.id) || 0) + l.q);
   $('#cartCount').textContent = n; $('#cartCount').hidden = !n;
-  $('#qc').hidden = !n; $('#qcTxt').textContent = n + (n === 1 ? ' صنف' : ' أصناف');
+  $('#qc').hidden = !n; $('#qcTxt').textContent = n ? sumText(subtotal()) : '';
+  $('#cartBtn').setAttribute('aria-label', n ? 'فتح سلة الطلب: العدد ' + n : 'فتح سلة الطلب');
   $('#cartEmpty').hidden = n > 0; $('#cartList').hidden = !n; $('#sum').hidden = !n;
   $('#goCo').disabled = !n || !waOK; $('#clearBtn').disabled = !n;
   $('#cartWaOff').hidden = waOK;
+  clearDraft();
   $('#sumTxt').textContent = 'المجموع: ' + sumText(subtotal());
   $('#sumNote').textContent = CONFIG.minOrder ? 'الحد الأدنى للتوصيل ' + money(CONFIG.minOrder) : '';
   const frag = document.createDocumentFragment();
@@ -465,6 +488,8 @@ function fee() {                     // null = يحددها المطعم
 function refreshCo() {
   const pick = curMode() === 'pickup', st = subtotal(), f = fee();
   $('#addrBox').hidden = pick; $('#zoneBox').hidden = pick || !CONFIG.zones.length;
+  $('#fAddr').required = !pick;
+  if (pick) for (const [field, err] of [['fAddr', 'eAddr'], ['fZone', 'eZone']]) { $('#' + field).removeAttribute('aria-invalid'); $('#' + err).textContent = ''; }
   const parts = ['المجموع: ' + sumText(st)];
   if (!pick) parts.push('رسوم التوصيل: ' + (f == null ? 'يحددها المطعم' : f ? money(f) : 'مجانًا'));
   if (!st.un && f != null) parts.push('الإجمالي: ' + money(st.t + f));
@@ -477,25 +502,26 @@ function buildZones() {
   CONFIG.zones.forEach(([n, c], i) => f.append(el('option', {value: String(i)}, n + ' — ' + (c ? money(c) : 'توصيل مجاني'))));
   $('#fZone').append(f);
 }
-const HM = /^\d{1,2}:\d{2}$/;
+const HM = /^(?:[01]?\d|2[0-3]):[0-5]\d$/;
 const HOURS_OK = !!CONFIG.hours && HM.test(CONFIG.hours.from) && HM.test(CONFIG.hours.to);
 const mins = t => { const [h, m] = t.split(':').map(Number); return h * 60 + m; };
 const tm = t => new Date(2000, 0, 1, ...t.split(':').map(Number)).toLocaleTimeString('ar-EG', {hour: 'numeric', minute: '2-digit'});
 function renderStatus() {
   const st = $('#status');
   st.hidden = !HOURS_OK;
-  if (!HOURS_OK) return;
+  if (!HOURS_OK) { $('#closedNote').hidden = true; return; }
   const p = new Intl.DateTimeFormat('en-GB', {timeZone: 'Africa/Cairo', hour: '2-digit', minute: '2-digit', hour12: false}).formatToParts(new Date());
   const now = (Number(p.find(x => x.type === 'hour').value) % 24) * 60 + Number(p.find(x => x.type === 'minute').value);
   const a = mins(CONFIG.hours.from), b = mins(CONFIG.hours.to);
   const open = a === b || (a < b ? now >= a && now < b : now >= a || now < b);
-  st.textContent = open ? 'مفتوح الآن • حتى ' + tm(CONFIG.hours.to) : 'مغلق الآن • نفتح الساعة ' + tm(CONFIG.hours.from);
+  st.textContent = a === b ? 'مفتوح ٢٤ ساعة' : open ? 'مفتوح الآن • حتى ' + tm(CONFIG.hours.to) : 'مغلق الآن • نفتح الساعة ' + tm(CONFIG.hours.from);
   st.className = 'status ' + (open ? 'on' : 'off');
   $('#closedNote').hidden = open;
 }
 
 /* ===== التحقق وإرسال واتساب ===== */
-const waOK = /^\d{8,15}$/.test(CONFIG.whatsapp);
+const waOK = /^[1-9]\d{7,14}$/.test(CONFIG.whatsapp);
+const egyptMobile = v => toLatin(v).replace(/[\s\-().]/g, '').replace(/^(?:\+20|0020|20)(?=1[0125]\d{8}$)/, '0');
 const V = {
   name: v => /^[\p{L}\p{M}][\p{L}\p{M} .'’-]{1,49}$/u.test(v) ? '' : 'اكتب اسمك بالحروف فقط (من حرفين إلى 50 حرف).',
   phone: v => /^01[0125]\d{8}$/.test(v) ? '' : 'اكتب رقم موبايل مصري صحيح: 11 رقم يبدأ بـ 01.',
@@ -504,7 +530,7 @@ const V = {
 };
 const stripWA = s => s.replace(/[*_~`]/g, '');
 
-function waURL(f, pick, fe, st) {
+function orderMessage(f, pick, fe, st) {
   const z = f.zone === '' ? null : CONFIG.zones[Number(f.zone)];
   const lines = cart.map((l, i) => {
     const u = unit(l), rows = [(i + 1) + '. ' + MAP.get(l.id).n + ' × ' + l.q + (u == null ? '' : ' = ' + money(u * l.q))];
@@ -512,18 +538,22 @@ function waURL(f, pick, fe, st) {
     if (l.n) rows.push('   - ملاحظة: ' + stripWA(l.n));
     return rows.join('\n');
   });
-  const msg = ['*طلب جديد - مطعم بيراميدز*', '', 'نوع الطلب: ' + (pick ? 'استلام من المطعم' : 'توصيل'), 'الاسم: ' + stripWA(f.name), 'الموبايل: ' + f.phone,
+  return ['*طلب جديد - مطعم بيراميدز*', '', 'نوع الطلب: ' + (pick ? 'استلام من المطعم' : 'توصيل'), 'الاسم: ' + stripWA(f.name), 'الموبايل: ' + f.phone,
     ...(pick ? [] : ['العنوان: ' + stripWA(f.addr) + (z ? ' (' + z[0] + ')' : '')]), '', '*الطلب:*', ...lines, '',
     'المجموع: ' + sumText(st), ...(pick ? [] : ['رسوم التوصيل: ' + (fe == null ? 'يحددها المطعم' : fe ? money(fe) : 'مجانًا')]),
     !st.un && fe != null ? '*الإجمالي: ' + money(st.t + fe) + '*' : 'برجاء تأكيد الإجمالي.',
     ...(f.note ? ['', 'ملاحظات: ' + stripWA(f.note)] : [])].join('\n');
-  return 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(msg);
+}
+function clearDraft() {
+  $('#draft').hidden = true; $('#draftTxt').textContent = ''; $('#waLink').removeAttribute('href');
 }
 
 function submitOrder(e) {
   e.preventDefault();
   const pick = curMode() === 'pickup';
-  const f = {name: clean($('#fName').value, 50), phone: toLatin($('#fPhone').value).replace(/[\s\-().]/g, ''), addr: pick ? '' : clean($('#fAddr').value, 200), note: clean($('#fNote').value, 250), zone: $('#fZone').value};
+  clearDraft(); $('#eOrd').textContent = '';
+  if (!cart.length || !waOK) return;
+  const f = {name: clean($('#fName').value, 50), phone: egyptMobile($('#fPhone').value), addr: pick ? '' : clean($('#fAddr').value, 200), note: clean($('#fNote').value, 250), zone: $('#fZone').value};
   const checks = [['name', 'fName', 'eName'], ['phone', 'fPhone', 'ePhone']];
   if (!pick) checks.push(['addr', 'fAddr', 'eAddr']);
   if (!pick && CONFIG.zones.length) checks.push(['zone', 'fZone', 'eZone']);
@@ -542,12 +572,11 @@ function submitOrder(e) {
     $('#eOrd').textContent = 'الحد الأدنى للتوصيل ' + money(CONFIG.minOrder) + '. ضيف أصناف أو اختر الاستلام من المطعم.';
     return;
   }
-  if (!waOK) return toast('رقم واتساب المطعم غير مضبوط', true);
-  const url = waURL(f, pick, fe, st);
+  const msg = orderMessage(f, pick, fe, st);
+  const url = 'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(msg.toWellFormed ? msg.toWellFormed() : msg.replace(/[\uD800-\uDFFF]/gu, '\uFFFD'));
   if (url.length > 6000) { $('#eOrd').textContent = 'الطلب كبير جدًا، قلّل الأصناف أو الملاحظات.'; return; }
-  const a = $('#waLink');
-  a.href = url; a.hidden = false; a.click();
-  toast('اتفتح واتساب، راجع الرسالة واضغط إرسال');
+  $('#waLink').href = url; $('#draftTxt').textContent = msg;
+  $('#draft').hidden = false; $('#draftT').focus();
 }
 
 /* ===== الأحداث (Event Delegation) ===== */
@@ -583,10 +612,10 @@ $('#optForm').addEventListener('submit', e => {
 $('#chips').addEventListener('click', e => {
   const b = e.target.closest('[data-cat]'); if (!b) return;
   cat = b.dataset.cat;
-  for (const x of $('#chips').children) x.setAttribute('aria-pressed', String(x === b));
   applyFilter();
 });
-$('#q').addEventListener('input', debounce(e => { term = e.target.value.slice(0, 40); applyFilter(); }, 200));
+$('#q').addEventListener('input', debounce(() => { term = $('#q').value.slice(0, 40); applyFilter(); }, 180));
+$('#resetFilter').addEventListener('click', () => { cat = 'all'; term = ''; $('#q').value = ''; applyFilter(); $('#q').focus(); });
 $('#cartList').addEventListener('click', e => {
   const b = e.target.closest('[data-act]'); if (!b) return;
   const i = Number(b.dataset.id), l = cart[i]; if (!l) return;
@@ -605,9 +634,12 @@ $('#clearBtn').addEventListener('click', () => { cart = []; saveCart(); renderCa
 const cartDlg = $('#cartDlg'), coDlg = $('#coDlg');
 $('#cartBtn').addEventListener('click', () => cartDlg.showModal());
 $('#qcBtn').addEventListener('click', () => cartDlg.showModal());
-$('#goCo').addEventListener('click', () => { if (!cart.length) return; cartDlg.close(); $('#waLink').hidden = true; refreshCo(); coDlg.showModal(); });
+$('#goCo').addEventListener('click', () => { if (!cart.length || !waOK) return; cartDlg.close(); clearDraft(); refreshCo(); coDlg.showModal(); });
+$('#backCart').addEventListener('click', () => { coDlg.close(); cartDlg.showModal(); });
+coDlg.addEventListener('close', clearDraft);
 $('#coForm').addEventListener('submit', submitOrder);
-$('#coForm').addEventListener('change', refreshCo);
+$('#coForm').addEventListener('change', () => { clearDraft(); refreshCo(); });
+$('#coForm').addEventListener('input', e => { clearDraft(); $('#eOrd').textContent = ''; const ids = {fName:'eName', fPhone:'ePhone', fAddr:'eAddr', fZone:'eZone'}; if (ids[e.target.id]) { e.target.removeAttribute('aria-invalid'); $('#' + ids[e.target.id]).textContent = ''; } });
 document.addEventListener('click', e => {
   const x = e.target.closest('[data-close]');
   if (x) x.closest('dialog').close();
@@ -622,9 +654,10 @@ $('#addr').textContent = CONFIG.address;
 if (/^01\d{9}$/.test(CONFIG.phone)) { const a = $('#phoneA'); a.textContent = CONFIG.phone; a.href = 'tel:+2' + CONFIG.phone; $('#phoneRow').hidden = false; }
 if (waOK) { const a = $('#waA'); a.textContent = 'ابدأ محادثة على واتساب'; a.href = 'https://wa.me/' + CONFIG.whatsapp; $('#waRow').hidden = false; }
 $('#waOff').hidden = waOK; $('#send').disabled = !waOK;
+$('#stepOrder').textContent = waOK ? 'راجع المسودة وافتح واتساب' : 'الطلب أونلاين غير متاح حاليًا';
 $('#yr').textContent = new Date().getFullYear();
 if (CONFIG.banner) { $('#banner').textContent = clean(CONFIG.banner, 140); $('#banner').hidden = false; }
-if (HOURS_OK) { $('#hoursTxt').textContent = 'مواعيد العمل: ' + tm(CONFIG.hours.from) + ' – ' + tm(CONFIG.hours.to); $('#hoursRow').hidden = false; }
+$('#hoursTxt').textContent = !HOURS_OK ? 'مواعيد العمل لم تُعلن بعد' : mins(CONFIG.hours.from) === mins(CONFIG.hours.to) ? 'مفتوح ٢٤ ساعة' : 'مواعيد العمل: ' + tm(CONFIG.hours.from) + ' – ' + tm(CONFIG.hours.to);
 for (const i of document.images) if (i.complete && !i.naturalWidth) i.classList.add('broken');
 </script>
 </body>
