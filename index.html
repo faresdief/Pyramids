@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar-EG" dir="rtl">
 <head>
 <meta charset="utf-8">
     <!-- Link preview (Open Graph / Twitter) -->
@@ -13,18 +13,24 @@
     <meta name="twitter:title" content="بيراميدز | مشويات مصرية في قصر العيني">
     <meta name="twitter:description" content="اختار من المنيو وراجع طلبك قبل الإرسال.">
     <meta name="twitter:image" content="https://faresdief.github.io/Pyramids/og-image.jpg">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-yB+y4m625+AKCTzTLFohLkcyfF3KRMEAMrnAC1S75h4='; style-src 'sha256-70AOLtkO3NpM36pGocKmdqetostVidvpCb/MfOxEJ08=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src data: https://images.unsplash.com; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; manifest-src 'none'; upgrade-insecure-requests; require-trusted-types-for 'script'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-jwoVwwm4G5rjLj9FECUPJUnYIDKCj5//Rz49wZtXz9I='; style-src 'sha256-CS7r2S+XMkjihOTV/RlisE2ZTwQUCBjzLvxTctgNaS8=' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; trusted-types pyramids-pwa; require-trusted-types-for 'script'">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#F5EEDF" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0A1C1F" media="(prefers-color-scheme: dark)">
 <meta name="referrer" content="no-referrer">
+<link rel="canonical" href="https://faresdief.github.io/Pyramids/">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="1-icon-192.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"منيو بيراميدز للمشويات","url":"https://faresdief.github.io/Pyramids/","inLanguage":"ar-EG","description":"منيو بيراميدز للمشويات والسندوتشات والوجبات والطواجن في قصر العيني، القاهرة.","primaryImageOfPage":{"@type":"ImageObject","url":"https://faresdief.github.io/Pyramids/og-image.jpg"},"about":{"@type":"Restaurant","name":"بيراميدز","hasMenu":"https://faresdief.github.io/Pyramids/"}}
+</script>
 <meta name="description" content="منيو بيراميدز في قصر العيني: مشويات وسندوتشات ووجبات وطواجن مصرية. اختار أكلك وراجع طلبك.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ar_EG">
 <meta property="og:title" content="بيراميدز | مشويات مصرية في قصر العيني">
 <meta property="og:description" content="اختار من المنيو وراجع طلبك قبل الإرسال.">
-<title>بيراميدز | مشويات مصرية في قصر العيني</title>
+<title>منيو بيراميدز | مشويات ووجبات في قصر العيني، القاهرة</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B4F55'/%3E%3Cpath d='M16 6 27 25H5z' fill='%23D3A347'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,6 +71,7 @@ img.broken{display:none}
 .btn:active{transform:scale(.97)}
 .btn:disabled{opacity:.45;cursor:not-allowed}
 .btn.gold{background:var(--gold);color:#073A3F}
+.hero-actions{display:flex;flex-wrap:wrap;gap:8px}.btn.install{background:none;color:var(--on);border:1px solid #fff7}
 .btn.ghost{background:none;border:1px solid var(--line);color:var(--ink)}
 .btn.wa{background:#157347;color:#fff}
 .steps{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0;margin:16px 0 24px;counter-reset:s}
@@ -195,7 +202,7 @@ legend{margin-bottom:6px;font-weight:700}
     <p id="status" class="status" hidden></p>
     <h1>طعم مصري أصيل من قلب قصر العيني</h1>
     <p>مشويات وسندوتشات ووجبات وطواجن. اختار من المنيو وراجع طلبك قبل الإرسال.</p>
-    <a class="btn gold" href="#menu">شوف المنيو</a>
+    <div class="hero-actions"><a class="btn gold" href="#menu">شوف المنيو</a><button id="installApp" class="btn install" type="button" hidden>ثبّت الموقع</button></div>
   </div>
   <div class="arch"><svg class="ic" aria-hidden="true"><use href="#i-pyr"/></svg><img src="https://images.unsplash.com/photo-1763647818263-62a9256f097c?auto=format&fit=crop&w=800&q=78" alt="" width="800" height="1000" fetchpriority="high" decoding="async" referrerpolicy="no-referrer"></div>
 </div></section>
@@ -659,6 +666,28 @@ $('#yr').textContent = new Date().getFullYear();
 if (CONFIG.banner) { $('#banner').textContent = clean(CONFIG.banner, 140); $('#banner').hidden = false; }
 $('#hoursTxt').textContent = !HOURS_OK ? 'مواعيد العمل لم تُعلن بعد' : mins(CONFIG.hours.from) === mins(CONFIG.hours.to) ? 'مفتوح ٢٤ ساعة' : 'مواعيد العمل: ' + tm(CONFIG.hours.from) + ' – ' + tm(CONFIG.hours.to);
 for (const i of document.images) if (i.complete && !i.naturalWidth) i.classList.add('broken');
+
+/* Show an install control only when the browser supplies its real prompt. */
+const installBtn = $('#installApp');
+let installPrompt;
+window.addEventListener('beforeinstallprompt', event => {
+  event.preventDefault(); installPrompt = event; installBtn.hidden = false;
+});
+window.addEventListener('appinstalled', () => { installPrompt = null; installBtn.hidden = true; });
+installBtn.addEventListener('click', async () => {
+  const prompt = installPrompt;
+  if (!prompt) return;
+  installPrompt = null; installBtn.hidden = true;
+  try { await prompt.prompt(); } catch { /* installation remains available from the browser menu */ }
+});
+if ('serviceWorker' in navigator && window.isSecureContext) {
+  const swURL = new URL('./sw.js', location.href).href;
+  const policy = window.trustedTypes?.createPolicy('pyramids-pwa', {createScriptURL: url => {
+    if (url !== swURL) throw new TypeError('Unexpected worker URL');
+    return swURL;
+  }});
+  navigator.serviceWorker.register(policy ? policy.createScriptURL(swURL) : swURL, {updateViaCache:'none'}).catch(() => {});
+}
 </script>
 </body>
 </html>
